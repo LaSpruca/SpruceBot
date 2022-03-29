@@ -40,16 +40,15 @@ auto Robot::stop() -> void {
 }
 
 auto Robot::forwardLeft() -> void {
-    _resetSpeed();
-
     _leftMotor.setSpeed(_speed / 2);
+    _rightMotor.setSpeed(_speed);
+
     _leftMotor.forward();
     _rightMotor.forward();
 }
 
 auto Robot::forwardRight() -> void {
-    _resetSpeed();
-
+    _leftMotor.setSpeed(_speed);
     _rightMotor.setSpeed(_speed / 2);
 
     _leftMotor.forward();

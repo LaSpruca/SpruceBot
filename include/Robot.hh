@@ -1,5 +1,6 @@
 #pragma once
 #include <Motor.hh>
+#include <LineFollow.hh>
 
 class Robot {
 public:
